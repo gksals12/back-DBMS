@@ -127,6 +127,7 @@ CREATE TABLE TBL_ADVER_FORM(
 -- 데이터 베이스 시스템을 만들어주세요.
 -- MEMBER
 -- 이름, 나이, 핸드폰, 주소, 등급, ...
+-- 하나의 상품을 여러 고객이 구매 할 수 있고, 한명의 고객이 여러 상품을 구해 할 수 있고
 CREATE SEQUENCE SEQ_MEMBER;
 CREATE TABLE TBL_MEMBER(
    ID NUMBER CONSTRAINT PK_MEMBER PRIMARY KEY,
@@ -167,7 +168,6 @@ CREATE TABLE TBL_ORDER(
 -- 상품 판매자(TBL_SELLER)가 상품 구매자(TBL_BUYER)에게
 -- 배송(TBL_DELEVERY)을 할 수 있는 기능이 필요해요.
 -- 판매자: 음료, 음료 종류, 음료 크기, 만든 날짜
-
 CREATE SEQUENCE SEQ_SELLER;
 CREATE TABLE TBL_SELLER(
    ID NUMBER CONSTRAINT PK_SELLER PRIMARY KEY,
